@@ -8,6 +8,8 @@ Rauthy provides the Admin GUI and User GUI and Server and replication, with OIDC
 
 The work to do this as OIDC relay is at: https://github.com/sebadob/rauthy/issues/1582
 
+Also Rauthy sends emails and so we can easily add support for Cloudflare email sending. See https://github.com/joeblew999/workers-rs-util/tree/main#crates where we have nu_plugin_email + cf_email_worker	host + wasm	Email send/receive via Cloudflare Email Service.
+
 Also Rauthy uses https://github.com/sebadob/hiqlite ( SQLITE with Raft ) to keep the Sqlite databases in sync between servers. We can look at using https://github.com/connyay/EdgeReplica, which has ConnectRPC for Admin, to allow developers to use CloudFlare for Sqlite sync and backups. This idea needs discussion with https://github.com/sebadob though.
 
 Also Rauthy Server could also be adapter to work on Cloudflare. Another discussion ( idea for later ). The SQLIte is then replcation by Cloudflare inherent COLO sync. See https://github.com/joeblew999/cf-do-locator
