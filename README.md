@@ -1,10 +1,10 @@
 # cf-rauthy
 
-https://github.com/sebadob/rauthy for cloudflare. The Server is self hosted on any standard server, and the client runs on Cloudflare workers using worker-rs. 
+https://github.com/sebadob/rauthy for cloudflare. The Rauthy server is self hosted on any standard server, and the client needs to run on Cloudflare workers using worker-rs so that its easy for Cloudflare apps to use Rauthy.
 
-Rauthy provides the Admin GUI and User GUI and Server and replication, with OIDC.
+Rauthy provides the Admin GUI and User GUI and Server and replication, with OIDC and other standard enterprise protocols.
 
-The work to do this is here: https://github.com/sebadob/rauthy/issues/1582
+The work to do this as OIDC relay is at: https://github.com/sebadob/rauthy/issues/1582
 
 Once this is done we can combine Auth and ReBac using Cedar ( https://github.com/cedar-policy/cedar9 , allowing a clean and extensible security system with minimal resource usage. Cedar runs fine on Cloudflare. Rauthy client has the required primitives.
 
