@@ -2,6 +2,8 @@
 
 https://github.com/sebadob/rauthy for cloudflare. The Rauthy server is self hosted on any standard server, and the client needs to run on Cloudflare workers using worker-rs so that its easy for Cloudflare apps to use Rauthy.
 
+ALL the ideas here MUST support NATIVE and Cloudflare, so the Developers can always fully self host.
+
 Rauthy provides the Admin GUI and User GUI and Server and replication, with OIDC and other standard enterprise protocols.
 
 The work to do this as OIDC relay is at: https://github.com/sebadob/rauthy/issues/1582
