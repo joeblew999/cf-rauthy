@@ -1,6 +1,6 @@
 # cf-rauthy
 
-https://github.com/sebadob/rauthy for cloudflare. The Server is self hosted on any standard server, and the client runs on Cloudflare workers using worker-rs.
+https://github.com/sebadob/rauthy for cloudflare. The Server is self hosted on any standard server, and the client runs on Cloudflare workers using worker-rs. 
 
 Rauthy provides the Admin GUI and User GUI and Server and replication, with OIDC.
 
@@ -11,6 +11,10 @@ Once this is done we can combine Auth and ReBac using Cedar ( https://github.com
 Then ConnectRPC ( for native and Cloudflare ) middlware can hook in. See: https://github.com/joeblew999/cf-connectrpc-middleware
 
 Connect RPC ,on Cloudflare, allows workers to interoperate over zero hops, and for any other clients in typescript and other ConnectRPC languages.  Thanks to https://github.com/anthropics/connect-rust and https://github.com/connyay/connectrpc-workers.
+
+Rauthy uses https://github.com/sebadob/hiqlite ( SQLITE with Raft ) to keep the Sqlite databases in sync between servers. We can look at using https://github.com/connyay/EdgeReplica, which has Connect RPC for Admin, to allow developers to use CloudFlare for Sync and backups. This idea needs discussion with https://github.com/sebadob though.
+
+
 
 
 
