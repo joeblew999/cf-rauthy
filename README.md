@@ -8,7 +8,9 @@ The work to do this as OIDC relay is at: https://github.com/sebadob/rauthy/issue
 
 Also Rauthy uses https://github.com/sebadob/hiqlite ( SQLITE with Raft ) to keep the Sqlite databases in sync between servers. We can look at using https://github.com/connyay/EdgeReplica, which has ConnectRPC for Admin, to allow developers to use CloudFlare for Sqlite sync and backups. This idea needs discussion with https://github.com/sebadob though.
 
-Once this is done we can combine Auth and ReBac using Cedar ( https://github.com/cedar-policy/cedar9 , allowing a clean and extensible security system with minimal resource usage. Cedar runs fine on Cloudflare. Rauthy client has the required primitives.
+Also Rauthy Server could also be adapter to work on Cloudflare. Another discussion ( idea for later ). The SQLIte is then replcation by Cloudflare inherent COLO sync. See https://github.com/joeblew999/cf-do-locator
+
+Also Rauthy and ReBac using Cedar ( https://github.com/cedar-policy/cedar9 , allowing a clean and extensible security system with minimal resource usage. Cedar runs fine on Cloudflare. Rauthy client has the required primitives.
 
 Then ConnectRPC ( for native and Cloudflare ) middlware can hook in. High quality ConnectRPC middleware for Native and Cloudflare provides easy and high quality operational needs.  See: https://github.com/joeblew999/cf-connectrpc-middleware
 
